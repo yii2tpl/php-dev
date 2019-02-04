@@ -33,7 +33,7 @@ class UserService {
 
     private function sendRequest(HttpRequestEntity $requestEntity) {
         $clientClient = new HttpRest;
-        $requestEntity->uri = $this->baseUrl . '/' . $requestEntity->uri;
+        $requestEntity->baseUrl = $this->baseUrl;
         if($this->authToken) {
             $requestEntity->addHeader('authorization', $this->authToken);
         }

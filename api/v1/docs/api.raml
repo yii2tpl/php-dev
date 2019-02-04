@@ -1,0 +1,34 @@
+#%RAML 1.0
+title: Account server
+version: v1
+protocols: [ HTTP, HTTPS ]
+baseUri: http://api.test.yii/v1
+
+mediaType: [ application/json, application/xml ]
+
+securitySchemes:
+  Auth: !include ../../../vendor/phpbundle/rest/src/domain/docs/securitySchemes/base.raml
+#securedBy: [ Auth ]
+
+traits:
+  paged:   !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/paged.raml
+  search:   !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/search.raml
+  lang:    !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/lang.raml
+  fields:  !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/fields.raml
+  expand:  !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/expand.raml
+  code200: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/200.raml
+  code201: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/201.raml
+  code204: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/204.raml
+  code304: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/304.raml
+  code400: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/400.raml
+  code401: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/401.raml
+  code403: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/403.raml
+  code404: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/404.raml
+  code405: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/405.raml
+  code415: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/415.raml
+  code422: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/422.raml
+  code429: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/429.raml
+  code500: !include ../../../vendor/phpbundle/rest/src/domain/docs/traits/codes/500.raml
+
+/auth: !include points/account/auth/api.raml
+/registration: !include points/account/registration/api.raml

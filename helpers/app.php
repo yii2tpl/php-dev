@@ -1,6 +1,8 @@
 <?php
 
-include('../vendor/autoload.php');
-include('../helpers/func.php');
+use helpers\Autoload;
 
-spl_autoload_register('app_autoloader');
+include('../helpers/func.php');
+include('../helpers/Autoload.php');
+
+Autoload::init();

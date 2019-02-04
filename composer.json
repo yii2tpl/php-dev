@@ -12,10 +12,13 @@
 
 		"yii2rails/yii2-app": "dev-master",
 		"yii2rails/yii2-domain": "dev-master",
-		"yii2rails/yii2-extension": "dev-master"
+		"yii2rails/yii2-extension": "dev-master",
+
+		"yii2bundle/yii2-account": "dev-master",
+		"yii2bundle/yii2-rest": "dev-master"
 	},
 	"require-dev": {
-
+		"yii2tool/yii2-vendor": "dev-master"
 	},
 	"config": {
 		"secure-http": false,

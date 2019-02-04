@@ -2,9 +2,7 @@
 
 use helpers\UserService;
 
-include(__DIR__ . '/../vendor/autoload.php');
-include(__DIR__ . '/../helpers/UserService.php');
-include(__DIR__ . '/../helpers/func.php');
+include('../helpers/app.php');
 
 $userService = new UserService();
 $userService->baseUrl = 'http://test-api.yunews.kz/v1';

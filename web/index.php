@@ -2,7 +2,7 @@
 
 use helpers\UserService;
 
-include('../helpers/app.php');
+include('../vendor/yii2rails/yii2-app/src/php/app.php');
 
 $userService = new UserService();
 $userService->baseUrl = 'http://test-api.yunews.kz/v1';
